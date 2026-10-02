@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./app.js" defer></script>
+    <title>Study Planner</title>
+  </head>
+  <body>
+    <main>
+      <!-- ================= App Summary ================= -->
+      <div>
+        <div class="summary">
+          <div class="task-summary total-tasks-container">
+            <h3>Total Tasks</h3>
+            <div class="total-tasks">0</div>
+          </div>
+          <div class="task-summary active-tasks-container">
+            <h3>Active Tasks</h3>
+            <div class="active-tasks">0</div>
+          </div>
+          <div class="task-summary completed-tasks-container">
+            <h3>Completed Tasks</h3>
+            <div class="completed-tasks">0</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ================= App Content ================= -->
+      <div class="app-content">
+        <!-- ---------- App Form ---------- -->
+        <div class="app-form">
+          <form id="task-form" novalidate>
+            <input
+              type="text"
+              name="title"
+              class="title"
+              placeholder="Title"
+              maxlength="60"
+            />
+            <input
+              type="text"
+              name="subject"
+              class="subject"
+              placeholder="Subject"
+              maxlength="30"
+            />
+            <select name="priority" class="priority">
+              <option value="">Select Priority</option>
+              <option value="high">High</option>
+              <option value="medium">Medium</option>
+              <option value="low">Low</option>
+            </select>
+            <input type="date" name="due-date" id="due-date" />
+            <button type="submit" class="submit">+ Add</button>
+          </form>
+        </div>
+
+        <!-- ---------- Tasks & Controls ---------- -->
+        <div class="app-tasks-and-controls">
+          <div class="app-controls-container">
+            <select name="controls" id="controls">
+              <option value="all">All</option>
+              <option value="active">Active</option>
+              <option value="completed">Completed</option>
+            </select>
+          </div>
+
+          <div class="tasks-container"></div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
